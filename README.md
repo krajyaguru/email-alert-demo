@@ -1,14 +1,28 @@
-📬 Email Alert Demo
-Laravel 8 (PHP 7.4) + AWS SNS + AWS Lambda + AWS SQS
-Infrastructure-as-Code using Terraform
+# Email Alert Demo – Laravel 8 + AWS SNS + Lambda + SQS
 
-This project demonstrates a complete notification pipeline using Laravel and AWS cloud services:
+End-to-end demo:
 
-Laravel → SNS → Lambda → SQS → Laravel Worker → Email
+> Laravel (PHP 7.4 / Laravel 8) → SNS → Lambda → SQS → Laravel Queue Worker → Email
 
-The infrastructure is 100% automated using Terraform, and the Lambda function is written in Node.js.
+---
 
-This project is perfect for learning AWS event-driven architecture, queue processing, and Infrastructure-as-Code.
+## Prerequisites
+
+- PHP 7.4
+- Composer
+- Node.js (for Lambda packaging)
+- AWS account
+- Terraform (v1.x)
+- An SMTP setup for Laravel mail (Mailtrap, SES, etc.)
+
+---
+
+## 1. Create Laravel 8 App
+
+```bash
+composer create-project laravel/laravel:^8.0 email-alert-demo
+cd email-alert-demo
+
 
 🧱 Architecture Diagram
 flowchart LR
